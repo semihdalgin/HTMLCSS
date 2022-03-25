@@ -1,0 +1,290 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+   <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İNCESU BELEDİYESİ</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="src/css/leaflet.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.7/css/bootstrap-dialog.min.css">
+    <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="src/js/wicket.js?=1"></script>
+    <script src="src/js/wicket-leaflet.js?=1"></script>
+    <link rel="stylesheet" href="src/css/leaflet.css">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+	<link rel="stylesheet" href="src/css/Leaflet.PolylineMeasure.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+     <script type="text/javascript" src="src/js/Leaflet.PolylineMeasure.js"></script>
+	 <script type="text/javascript" src="src/js/providers.js"></script>
+        <script type="text/javascript" src="src/js/iconLayers.js"></script>
+        <link rel="stylesheet" href="src/css/iconLayers.css">
+       <link rel="stylesheet" href="src/css/L.Control.MousePosition.css">
+	   
+       <script src="src/js/leaflet.browser.print.js"></script>
+        <script src="src/js/leaflet.browser.print.utils.js"></script>
+        <script src="src/js/leaflet.browser.print.sizes.js"></script>
+		 <script src="src/js/leaflet.browser.print.sizes.js"></script>
+         <script src="src/js/L.Control.MousePosition.js"></script>
+
+
+</head>
+
+
+<body>
+<div id="searchBox" class="search col-lg-3 col-md-4 col-sm-5 col-xs-12" style="position:topright;z-index:999;right: -1420px;top: 10px;">
+    <div class="input-group">
+        <input placeholder="Orn:517/3" type="search" id="search" class="form-control">
+        <span class="input-group-btn">
+            <button class="btn btn-default" type="button">
+                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            </button>
+        </span>
+    </div>
+</div>
+<div id="map"></div>
+<script>
+var zoom=16;
+var enlem=38.624127;
+var boylam=35.180106; 
+</script>
+
+<script>
+var osm=L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '</a>'
+});
+var map = L.map('map',{zoomControl:false,layers:[osm]}).addLayer(osm).setView([enlem, boylam], zoom);
+    osm.addTo(map);
+
+</script>
+<script>
+L.marker([38.624127,35.180106]).addTo(map)
+    .bindPopup('İNCESU BELEDIYESİ')
+    .openPopup();
+</script>
+<script>
+var zoomTusu = L.control.zoom({
+    zoomInText:"+",
+    zoomInTitle:"Haritaya yakınlaş",
+    zoomOutText:"-",
+    zoomOutTitle:"Haritadan Uzaklaş",
+    position:'bottomright'
+    }
+);
+zoomTusu.addTo(map);
+</script>
+
+<script>
+var haritaciklama = L.control.attribution({
+    prefix: '<a href="https://incesu.bel.tr"> CBS INCESU</a>',
+    position:"bottomleft"
+});
+haritaciklama.addTo(map);
+haritaciklama.addAttribution("Tüm Hakları saklıdır. 2018");
+</script>
+
+<script>
+var googleharitasi = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',{subdomains:['mt0','mt1','mt2','mt3']});
+var geceharitasi = L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png', {subdomains:'abcd'});
+var tkgmparselleri = L.tileLayer('https://megsistile.tkgm.gov.tr/tkgm.ows.tile/tms/1.0.0/TKGM:parsel_tematik_3857/{z}/{x}/{-y}.png');
+var esriuydu = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}');
+var openTopoMap = L.tileLayer('http://{s}.tile.opentopomap.org/{z}/{x}/{y}.png');
+var Uyduiki = L.tileLayer('http://213.74.126.165:8080/wmts/2013_uydu/tms_grid/{z}/{x}/{y}.png');
+
+
+var imarplanı =L.tileLayer.wms("http://212.175.131.4:7005/wms", {
+    layers: 'incesu',
+    format: 'image/png',
+    transparent: true,
+    maxZoom: 30
+});
+
+
+
+var baseLayers = {
+	"İmar Planları": imarplanı,
+
+};
+
+var bina=  L.tileLayer.wms("http://gis.kayseri.bel.tr/geoserver/wms?service=WMS", {
+    layers: 'MVI_KBBSYAPI_GEO,kapi_mah_geo',
+    format: 'image/png',
+    attribution: "",
+	srs:'4326',
+    transparent: true,
+    maxZoom: 30
+});
+
+var parseller =  L.tileLayer.wms("http://213.74.126.165/Mapserver/mapserv.exe?map=C:/temp/wms_ncs.map&", {
+    layers: 'Parseller',
+    format: 'image/png',
+    attribution: "",
+	srs:'2322',
+    transparent: true,
+    maxZoom: 30
+});
+
+var yollar =L.tileLayer.wms("http://gis.kayseri.bel.tr/geoserver/wms?service=WMS", {
+    layers: 'KBBSYOL_3857',
+    format: 'image/png',
+    attribution: "",
+    transparent: true,
+    maxZoom: 20
+});
+
+var lejant =L.tileLayer.wms("http://213.74.126.165/Mapserver/mapserv.exe?map=C:/temp/wms_ncs_pafta.map&", {
+    layers: 'PAFTA',
+    format: 'image/png',
+    attribution: "",
+    transparent: true,
+    maxZoom: 20
+});
+
+var NAZIM25000 =L.tileLayer.wms('http://planlar.kayseri.bel.tr:6080/arcgis/services/imar/yirmibesbinplan/MapServer/WMSServer?', {
+        layers: '1,3,4,5,7,9,11,13,15,17,18,19,21,23,24,26,28',
+        format: 'image/png',
+        transparent: true,
+        srs: 'EPSG:3857',
+        maxZoom: 21
+    });
+   
+ var dogalgaz= L.tileLayer.wms('http://213.74.126.165/Mapserver/mapserv.exe?map=C:/temp/wmsdogalgaz.map&', {
+        layers: 'katman',
+        format: 'image/png',
+        transparent: true,
+        srs: 'EPSG:3857',
+        maxZoom: 20
+    });
+
+
+ var uygulama18 = L.tileLayer.wms('http://213.74.126.165/Mapserver/mapserv.exe?map=C:/temp/wms18omer5.map&', {
+        layers: 'imar18',
+        format: 'image/png',
+        transparent: true,
+        srs: 'EPSG:3857',
+        maxZoom: 21
+    });
+	
+    var Parselasyon = L.tileLayer.wms('http://213.74.126.165/Mapserver/mapserv.exe?map=C:/temp/PARSELASYON.map&', {
+        layers: 'PARSELASYON',
+        format: 'image/png',
+        transparent: true,
+        srs: 'EPSG:3857',
+        maxZoom: 19
+    });
+
+var overlays = {
+    "<img src='src/img/bina.png' /title='Binalar'> Binalar ve Numarataj <span class='my-layer-item'>  </span> ": bina,
+    "<img src='src/img/yol.png' /title='yollar'> Cadde Sokak <span class='my-layer-item'>  </span> ":yollar,
+    "<img src='src/img/isaret.png'/ title='TKGM Parseller' >TKGM PARSELLER <span class='my-layer-item'>  </span>": tkgmparselleri,
+	"<img src='src/img/bina.png' /title='Parseller' >PARSELLER <span class='my-layer-item'>  </span>":parseller,
+	"<img src='src/img/uygulama18.png'/ title='18ler' >18 UYGULAMALARI <span class='my-layer-item'>  </span>": uygulama18,
+	"<img src='src/img/uygulama18.png'/ title='18ler' >Pafta Lejantı <span class='my-layer-item'>  </span>": lejant,
+	"<img src='src/img/uygulama18.png'/ title='18ler' >Dogalgaz <span class='my-layer-item'>  </span>": dogalgaz,
+};
+
+
+
+var tumkatman = L.control.layers(baseLayers,overlays,{
+    position:'topleft'
+
+})
+tumkatman.addTo(map);
+
+</script>
+
+
+<script>	
+L.control.scale({maxWidth:240, metric:false, imperial:false, position: 'bottomright'}).addTo(map);
+
+L.control.polylineMeasure({position:'bottomright', unit:'meters', clearMeasurementsOnStop: true, showMeasurementsClearControl: true, showUnitControl: false}).addTo(map);	
+</script>
+<script>
+    
+
+            var layers = [];
+            for (var providerId in providers) {
+                layers.push(providers[providerId]);
+            }
+
+            layers.push({
+                layer: {
+                    onAdd: function() {},
+                    onRemove: function() {}
+                },
+                title: 'empty'
+            })
+
+            var ctrl = L.control.iconLayers(layers).addTo(map);
+			
+</script>
+
+<script>
+<!--Ada Parsel Sorgu Fonksiyonu-->
+$("#search").on("change", function () {
+    var text = $(this).val();
+    $.ajax({
+        type: 'GET',
+        url: 'http://213.74.126.166/KayseriMelikgazi/FullTextSearchServlet?crs=4326&limit=1&term=' + text,
+
+        success: function (response) {
+
+            $.each(response, function (i, item) {
+                var koordinatlar = item.polygon;
+                
+                var wkt = new Wkt.Wkt();
+                wkt.read(koordinatlar);
+                var myjson = wkt.toJson();
+                var featurex = L.geoJSON(myjson,
+                    {
+                        style: {
+                            weight: 1,
+                            opacity: 1,
+                            color: 'white',
+                            fillOpacity: 0.4,
+                            fillColor: '#FF0000'
+                        }
+                    });
+                featurex.addTo(map);
+                var bbox = featurex.getBounds();
+                map.fitBounds(bbox);
+            });
+        }
+    });
+});
+
+</script>
+
+<script>
+		 L.control.browserPrint({
+                /*printLayer: L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}', {
+                            	attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+                            	subdomains: 'abcd',
+                            	minZoom: 1,
+                            	maxZoom: 16,
+                            	ext: 'png'
+                            }),*/
+                closePopupsOnPrint: false,
+				printModes: [
+					L.control.browserPrint.mode("Landscape", "Landscape A3", "a3"),
+					L.control.browserPrint.mode("Landscape", "Landscape A4", "a4"),
+					L.control.browserPrint.mode("Portrait", "Portrait A5", "a5"),
+					L.control.browserPrint.mode("Auto", "Auto B4", "B4"),
+					L.control.browserPrint.mode("Custom", "Séléctionnez la zone B5", "B5")
+				]
+
+            }).addTo(map);
+         </script>
+
+</html>
+
+
+     
+	 
+	  
+
