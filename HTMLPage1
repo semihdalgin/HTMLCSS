@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Semih Dalgin LinkedIn</title>
+    <link type="text/css" rel="stylesheet" href="StyleSheet1.css" />
+</head>
+<body>
+    <div class="genel">
+        <div class="ust-menu golge">
+            <div class="boxed">
+                <div class="logo"></div>
+                <div class="elemanlar">
+                    <span class="ust-bilgi">
+                        LinkedIn Nedir?
+                    </span>
+                    <span class="ust-bilgi">
+                        Bugün Katılın
+                    </span>
+                    <span class="ust-bilgi">
+                        Oturum Açın
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="boxed">
+            <div class="profil">
+                <div class="profil-ust golge">
+                    <div class="resim">
+                        <img src="https://media-exp1.licdn.com/dms/image/C4D03AQGjtMxUEfP86Q/profile-displayphoto-shrink_400_400/0/1608034721283?e=1653523200&v=beta&t=_gyk3j-QQLHTHpzJlyiq0PxbxkzzsFGQHKjsItpH-ic" />
+                    </div>
+                    <div class="bilgiler">
+                        <h2>Semih Dalgin</h2>
+                        <span>*****</span><br />
+                        <span>Berlin </span>
+                        <ul class="ogrenim-ul">
+                            <li>
+                                <span class="gri-yazi">Önceki</span>Netcad Software
+                            </li>
+                            <li>
+                                <span class="gri-yazi">Eğitim</span> İstanbul Teknik
+                                Üniversitesi
+                            </li>
+                            <li>
+                                <span class="gri-yazi">Web </span><a href="https://tr.linkedin.com/in/semihdalgin"> Kişisel Web Sitesi</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <hr />
+                    <div class="profil-ust-reklam">
+                        <h2>
+                            LinkedIn’e katılın ve Semih Dalgin adlı kullanıcının
+                            profilinin tamamına erişin. Ücretsiz!
+                        </h2>
+                        <h4>
+                            Bir LinkedIn üyesi olarak, bağlantıları, fikirleri ve
+                            fırsatları paylaşan 900 milyon diğer profesyonele katılacaksınız.
+                        </h4>
+                        <ul>
+                            <li> Ortak tanıdıklarınızı görün</li>
+                            <li> Başka biri aracılığı ile tanışın</li>
+                            <li> Semih Dalgin ile doğrudan iletişime geçin</li>
+                        </ul>
+                        <a href="/" class="reklam-button">
+                            Semih Dalgin adlı üyenin Tam
+                            Profilini görüntüleyin
+                        </a>
+                    </div>
+                </div>
+                <div class="blok">
+                    <div class="baslik resim">
+                        <div class="deneyim resim">
+                            Experience
+                            <h2>
+                                Senior Manager of Product Management Department
+                            </h2>
+                            <h6>
+                                NETCAD YAZILIM A.Ş.
+                            </h6>
+                            <h6>March 2016 – October 2021, Türkiye</h6>
+                            <img src="https://media-exp1.licdn.com/dms/image/C4D0BAQHh29OQ_lp55g/company-logo_100_100/0/1608753542979?e=1656547200&v=beta&t=1WDRw9JcSDDCFqsbQnSmoKQumG-tHhWwbLS-Z2UoIoY"
+                                 style="float:right;
+                                 width=50px;
+                                 vertical-align:top;" />
+                            <p>
+                                <ul>
+                                    <li>
+                                        I managed 8 people. 2 of them were UI/UX designers. We manage 35 products (B2C) that are developed on desktop, web, and mobile solutions.
+                                    </li>
+                                    <li>
+                                        Coordination with software and project departments
+                                    </li>
+
+
+                                </ul>
+                            </p>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="blok">
+                    <div class="deneyim">
+                        Education
+                        <h2>İstanbul Teknik Üniversitesi</h2>
+                        <h6>
+                        </h6>
+                        <h6>2010 – 2015</h6>
+                    </div>
+                    <hr />
+
+                </div>
+            </div>
+            <div class="sag-menu golge">
+                <strong>Ada göre arama</strong>
+                <p>
+                    900 milyondan fazla profesyonel LinkedIn’de. Tanıdığınız kişileri
+                    bulun
+                </p>
+                <input class="form-eleman" placeholder="ad" />
+                <input class="form-eleman" placeholder="soyad" /> <br />
+                Örnek: <a href="/">Ulku Karacetin</a><br />
+                <strong>Ada göre arama</strong>
+                <div class="arkadas-liste">
+                    <div class="arkadas">
+                        <div class="resim">
+                            <img src="https://media-exp1.licdn.com/dms/image/C4E03AQE-pC7FZYId8w/profile-displayphoto-shrink_800_800/0/1600088656242?e=1653523200&v=beta&t=nr41fMykkqm1GfVKARaXOSaCpcX6AwCVbHtbOXeixLU" />
+                        </div>
+                        <div class="arkadas-bilgi">
+                            <a href="/"><h4>Necip Enes Gengeç</h4></a>
+                            <h5>Data Scientist@Getir</h5>
+                        </div>
+                    </div>
+                    <div class="arkadas">
+                        <div class="resim">
+                            <img src="https://media-exp1.licdn.com/dms/image/C4E03AQE-pC7FZYId8w/profile-displayphoto-shrink_800_800/0/1600088656242?e=1653523200&v=beta&t=nr41fMykkqm1GfVKARaXOSaCpcX6AwCVbHtbOXeixLU" />
+                        </div>
+                        <div class="arkadas-bilgi">
+                            <a href="/"><h4>Necip Enes Gengeç</h4></a>
+                            <h5>Data Scientist@Getir</h5>
+                        </div>
+                    </div>
+                    <div class="arkadas">
+                        <div class="resim">
+                            <img src="https://media-exp1.licdn.com/dms/image/C4E03AQE-pC7FZYId8w/profile-displayphoto-shrink_800_800/0/1600088656242?e=1653523200&v=beta&t=nr41fMykkqm1GfVKARaXOSaCpcX6AwCVbHtbOXeixLU" />
+                        </div>
+                        <div class="arkadas-bilgi">
+                            <a href="/"><h4>Necip Enes Gengeç</h4></a>
+                            <h5>Data Scientist@Getir</h5>
+                        </div>
+                    </div>
+                    <div class="arkadas">
+                        <div class="resim">
+                            <img src="https://media-exp1.licdn.com/dms/image/C4E03AQE-pC7FZYId8w/profile-displayphoto-shrink_800_800/0/1600088656242?e=1653523200&v=beta&t=nr41fMykkqm1GfVKARaXOSaCpcX6AwCVbHtbOXeixLU" />
+                        </div>
+                        <div class="arkadas-bilgi">
+                            <a href="/"><h4>Necip Enes Gengeç</h4></a>
+                            <h5>Data Scientist@Getir</h5>
+                        </div>
+                    </div>
+                    <div class="arkadas">
+                        <div class="resim">
+                            <img src="https://media-exp1.licdn.com/dms/image/C4E03AQE-pC7FZYId8w/profile-displayphoto-shrink_800_800/0/1600088656242?e=1653523200&v=beta&t=nr41fMykkqm1GfVKARaXOSaCpcX6AwCVbHtbOXeixLU" />
+                        </div>
+                        <div class="arkadas-bilgi">
+                            <a href="/"><h4>Necip Enes Gengeç</h4></a>
+                            <h5>Data Scientist@Getir</h5>
+                        </div>
+                    </div>
+                    <div class="arkadas">
+                        <div class="resim">
+                            <img src="https://media-exp1.licdn.com/dms/image/C4E03AQE-pC7FZYId8w/profile-displayphoto-shrink_800_800/0/1600088656242?e=1653523200&v=beta&t=nr41fMykkqm1GfVKARaXOSaCpcX6AwCVbHtbOXeixLU" />
+                        </div>
+                        <div class="arkadas-bilgi">
+                            <a href="/"><h4>Necip Enes Gengeç</h4></a>
+                            <h5>Data Scientist@Getir</h5>
+                        </div>
+                    </div>
+                    <div class="arkadas">
+                        <div class="resim">
+                            <img src="https://media-exp1.licdn.com/dms/image/C4E03AQE-pC7FZYId8w/profile-displayphoto-shrink_800_800/0/1600088656242?e=1653523200&v=beta&t=nr41fMykkqm1GfVKARaXOSaCpcX6AwCVbHtbOXeixLU" />
+                        </div>
+                        <div class="arkadas-bilgi">
+                            <a href="/"><h4>Necip Enes Gengeç</h4></a>
+                            <h5>Data Scientist@Getir</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
