@@ -1,0 +1,173 @@
+body {
+    background-color: #eee;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 13px;
+}
+
+.genel {
+    margin: 60px;
+}
+
+hr {
+    border-color: #f1f1f1;
+}
+
+.ust-menu {
+    background-color: #3f3f3f;
+    height: 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+input {
+    display: inline-block;
+    width: 100px;
+    padding: 4px;
+    margin: 3px;
+}
+
+.logo {
+    background-image: url(https://static.licdn.com/scds/common/u/images/logos/linkedin/logo_linkedin_flat_wh ite_93x21.png);
+    height: 23px;
+    width: 100px;
+    background-size: contain;
+    margin: 8px;
+    float: left;
+}
+
+.elemanlar {
+    float: right;
+    padding: 10px;
+    color: #808080;
+}
+
+.ust-bilgi {
+    margin: 5px;
+    font-size: 15px;
+}
+
+.golge {
+    box-shadow: 0 2px 2px rgba(0,0,0,.15);
+}
+
+.boxed {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profil {
+    width: 65%;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 25px;
+}
+
+.profil-ust {
+    background-color: #fff;
+}
+
+.sag-menu {
+    width: 30%;
+    float: left;
+}
+
+.resim img {
+    width: 200px;
+    margin-top: 20px;
+    padding-left: 5px;
+}
+
+.resim, .bilgiler {
+    display: inline-block;
+}
+
+.bilgiler {
+    vertical-align: top;
+    margin-left: 20px;
+}
+
+.ogrenim-ul {
+    list-style: none;
+    padding: 0;
+}
+
+.bilgiler h2 {
+    margin: 0px;
+    margin-top: 25px;
+}
+
+.ogrenim-ul li {
+    font-size: 13px;
+}
+
+.gri-yazi {
+    font-size: 10px;
+    color: #808080;
+    margin-right: 15px;
+}
+
+.profil-ust-reklam h2, h6 {
+    margin: 0;
+}
+
+.profil-ust-reklam h4 {
+    font-weight: 500;
+}
+
+.profil-ust-reklam, .deneyim {
+    padding: 30px;
+}
+
+.reklam-button:hover {
+    background-color: #dcbc0b;
+}
+
+.reklam-button {
+    background-color: #ffd800;
+    border: 1px solid #dcbc0b;
+    border-radius: 3px;
+    padding: 5px;
+    font-weight: 600;
+}
+
+.blok {
+    margin-top: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 2px rgba(0,0,0,.15);
+}
+
+.sag-menu {
+    background-color: #fff;
+    padding: 15px;
+}
+
+.resim, .arkadas-bilgi {
+    display: inline-block;
+}
+
+    .arkadas-bilgi h4 {
+        margin-bottom: 0;
+    }
+
+    .arkadas-bilgi h5 {
+        margin: 0;
+    }
+
+.arkadas-bilgi {
+    margin-left: 5px;
+    vertical-align: top;
+}
+
+.arkadas .resim img {
+    width: 50px;
+}
+
+.arkadas-bilgi a {
+    text-decoration: none;
+    color: #46a7d8;
+}
+
